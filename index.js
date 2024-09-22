@@ -57,6 +57,6 @@ const questions = [
 
 prompt(questions).then((answers) => {
     //const readmeContent = generatorMarkdown(answers);
-    fs.writeFileSync('README.md', answers);
+    fs.writeFileSync('READMEgenerator.md', answers);
     console.log('README.md has been generated!');
   });
