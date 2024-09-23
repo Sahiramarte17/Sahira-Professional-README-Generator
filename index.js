@@ -1,8 +1,6 @@
 //Included packages required for this files.
-const inquirer = require('inquirer');
-const fs = require('fs');
-const prompt = inquirer.createPromptModule();
-//const generatorMarkdown = require("generateMarkdown.js");
+const fs = require("fs");
+const inquirer = require("inquirer");
 
 //Aarray of questions for user input.
 const questions = [
