@@ -52,3 +52,11 @@ Refer to the Video Submission GuideLinks to an external site. on the Full-Stack 
 
 Solution URL:
 Link:
+
+Video Demostration:
+Link:
+
+Installation Process
+1. clone the respository: Sahira-Professional-README-Generator
+2. Open the cloned repository in the source code editor
+3. Open integrated ternimal on index.js in order to run "npm i" on the command line to ensure that "node-module and "pacakge. json" are operating on you local device.
