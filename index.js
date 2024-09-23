@@ -1,100 +1,95 @@
-//Included packages required for this files.
+// Included packages required for this file.
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-//Aarray of questions for user input.
+// Array of questions for user input.
 const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the Title of the project?",
+        message: "What is the title of the project?",
     },
     {
         type: "input",
         name: "description",
-        message: "Provide a short description of the project, by explaining the WSH of your project?",
+        message: "Provide a short description of the project, explaining the purpose of your project:",
     },
     {
         type: "input",
         name: "installation",
-        message: "What are the steps required to install your project?, provide a step-by step description,",
+        message: "What are the steps required to install your project? Provide a step-by-step description:",
     },
     {
         type: "input",
         name: "usage",
-        message: "Provide instruction and exmaples for usage",
+        message: "Provide instructions and examples for usage:",
     },
     {
         type: "input",
         name: "contribution",
-        message: "explain the guidelines for contributing to this project?",
+        message: "Explain the guidelines for contributing to this project:",
     },
     {
         type: "input",
         name: "test",
-        message: "Explain the necessary steps to run the test for your project?",
+        message: "Explain the necessary steps to run the tests for your project:",
     },
-
     {
         type: "list",
-        name: "LICENSE",
-        message: "which licence would you like to use for this project?",
-        choices: ["MIT License", "Apache Licence 2.0", "MPL2.0", "None"],
+        name: "license",
+        message: "Which license would you like to use for this project?",
+        choices: ["MIT License", "Apache License 2.0", "MPL 2.0", "None"],
     },
     {
         type: "input",
         name: "github",
-        message: "please enter your github profile Link",
+        message: "Please enter your GitHub profile link:",
     },
-    { type: "input",
+    {
+        type: "input",
         name: "email",
-        message: "please enter your email address",
+        message: "Please enter your email address:",
     },
-
-]
+];
 
 // Initializing app
 function generateReadMe() {
     inquirer.prompt(questions).then((responses) => {
-        console.log("Creating README.md...");
+        console.log("Creating READMEgenerator.md...");
         const readmeContent = `
-        # ${responses.title}
-        ![Github license](https://img.shields.io/badge/license-${responses.license}-blue.svg) 
-    ## Description
-    ${responses.description}
-    ## Deployed Application URL
-    ${responses.link}
-       ## Screenshot
-    ![alt-text](${responses.screenshot})
-    ## Table of Contents
-    * [Features](#features)
-    * [Languages & Dependencies](#languagesanddependencies)
-    * [How to Use This Application](#HowtoUseThisApplication)
-    * [Contributors](#contributors)
-    * [Testing](#testing)
-    * [Questions](#questions)
-    ## Features
-    ${responses.features}
-    ## Languages & Dependencies
-    ${responses.require}
-    ## How to Use This Application:
-    ${responses.usage}
-    ## Contributors
-    ${responses.contributors}
-    ## Testing
-    ${responses.test}
-    ## Questionsx
-    Please send your questions [here](mailto:${responses.email}?subject=[GitHub]%20Dev%20Connect) or visit [github/${responses.creator}](https://github.com/${responses.creator}).
-    `
-  
-    fs.writeFile('README.md', readmeContent, (err) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        console.log('README.md created successfully!');
+# ${responses.title}
+![GitHub license](https://img.shields.io/badge/license-${responses.license.replace(/ /g, '%20')}-blue.svg)
+
+## Description
+${responses.description}
+
+## Installation
+${responses.installation}
+
+## Usage
+${responses.usage}
+
+## Contributing
+${responses.contribution}
+
+## Testing
+${responses.test}
+
+## License
+This project is licensed under the ${responses.license}.
+
+## Questions
+Please send your questions [here](mailto:${responses.email}?subject=[GitHub]%20Dev%20Connect) or visit [GitHub/${responses.github.split('/').pop()}](https://github.com/${responses.github.split('/').pop()}).
+`;
+
+        fs.writeFile("READMEgenerator.md", readmeContent, (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log("READMEgenerator.md created successfully!");
+        });
     });
-});
 }
 
 generateReadMe();
