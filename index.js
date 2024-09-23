@@ -58,7 +58,7 @@ const questions = [
 // Initializing app
 function generateReadMe() {
     inquirer.prompt(questions).then((responses) => {
-      console.log("Creating README.md...");
+      console.log("Creating READMEgenerator.md...");
       data = `# ${responses.title}
         ![Github license](https://img.shields.io/badge/license-${responses.license}-blue.svg) 
     ## Description
@@ -87,7 +87,7 @@ function generateReadMe() {
     ## Questionsx
     Please send your questions [here](mailto:${responses.email}?subject=[GitHub]%20Dev%20Connect) or visit [github/${responses.creator}](https://github.com/${responses.creator}).
     `
-    return fs.writeFileSync('README.md', data)
+    return fs.writeFileSync('READMEgenerator.md', data)
 });
 }
 generateReadMe();
