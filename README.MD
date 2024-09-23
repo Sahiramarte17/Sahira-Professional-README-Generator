@@ -51,10 +51,10 @@ Include any other screenshots you deem necessary to help someone who has never b
 Refer to the Video Submission GuideLinks to an external site. on the Full-Stack Blog for additional guidance on creating a video.
 
 Solution URL:
-Link: https://github.com/Sahiramarte17/Sahira-Professional-README-Generator
+Link: https://github.com/Sahiramarte17/Sahira-Professional-README-Generator.git
 
 Video Demostration:
-Link:
+Link: https://drive.google.com/file/d/1P00SGvzxv3XdIoi1gQ8aT5HOK0A-YFDD/view
 
 Installation Process
 1. clone the respository: Sahira-Professional-README-Generator
