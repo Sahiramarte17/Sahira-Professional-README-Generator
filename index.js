@@ -65,3 +65,13 @@ function generateReadMe() {
     ${responses.description}
     ## Deployed Application URL
     ${responses.link}
+       ## Screenshot
+    ![alt-text](${responses.screenshot})
+    ## Table of Contents
+    * [Features](#features)
+    * [Languages & Dependencies](#languagesanddependencies)
+    * [How to Use This Application](#HowtoUseThisApplication)
+    * [Contributors](#contributors)
+    * [Testing](#testing)
+    * [Questions](#questions)
+    ## Features
