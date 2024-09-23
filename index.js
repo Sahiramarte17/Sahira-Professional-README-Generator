@@ -87,3 +87,7 @@ function generateReadMe() {
     ## Questionsx
     Please send your questions [here](mailto:${responses.email}?subject=[GitHub]%20Dev%20Connect) or visit [github/${responses.creator}](https://github.com/${responses.creator}).
     `
+    return fs.writeFileSync('README.md', data)
+});
+}
+generateReadMe();
