@@ -9,12 +9,12 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the name of the project Title?",
+        message: "What is the Title of the project?",
     },
     {
         type: "input",
         name: "description",
-        message: "Provide a short description, by explaining the WSH of your project?",
+        message: "Provide a short description of the project, by explaining the WSH of your project?",
     },
     {
         type: "input",
