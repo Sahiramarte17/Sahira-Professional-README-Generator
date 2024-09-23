@@ -11,7 +11,7 @@ Short describtion here
 3.Contribution Guidelines
 4.Test Instructions
 5.License
-6.Question
+6.Questions
 
 
 ## Installation
