@@ -55,3 +55,8 @@ const questions = [
 
 ]
 
+// Initializing app
+function generateReadMe() {
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating README.md...");
+      data = `# ${responses.title}
