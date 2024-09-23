@@ -20,6 +20,7 @@ User Story
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
+
 Acceptance Criteria
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
@@ -49,3 +50,5 @@ Include any other screenshots you deem necessary to help someone who has never b
 
 Refer to the Video Submission GuideLinks to an external site. on the Full-Stack Blog for additional guidance on creating a video.
 
+Solution URL:
+Link:
