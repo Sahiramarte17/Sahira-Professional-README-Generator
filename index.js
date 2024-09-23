@@ -60,3 +60,8 @@ function generateReadMe() {
     inquirer.prompt(questions).then((responses) => {
       console.log("Creating README.md...");
       data = `# ${responses.title}
+        ![Github license](https://img.shields.io/badge/license-${responses.license}-blue.svg) 
+    ## Description
+    ${responses.description}
+    ## Deployed Application URL
+    ${responses.link}
