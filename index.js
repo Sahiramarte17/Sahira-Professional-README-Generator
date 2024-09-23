@@ -75,3 +75,15 @@ function generateReadMe() {
     * [Testing](#testing)
     * [Questions](#questions)
     ## Features
+    ${responses.features}
+    ## Languages & Dependencies
+    ${responses.require}
+    ## How to Use This Application:
+    ${responses.usage}
+    ## Contributors
+    ${responses.contributors}
+    ## Testing
+    ${responses.test}
+    ## Questionsx
+    Please send your questions [here](mailto:${responses.email}?subject=[GitHub]%20Dev%20Connect) or visit [github/${responses.creator}](https://github.com/${responses.creator}).
+    `
